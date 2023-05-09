@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Nunito:wght@200;300;400;500;600;700;800&family=Yantramanav:wght@300;400&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+/* {
+    pink: 251, 137, 188;
+    blue: 10, 104, 113;
+    black: 10, 10, 10;
+    white: 247, 255, 224;
+} */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button{
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 16px;
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+}
+
+body{
+    background-color: #faeee2;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 50px;
+}
+
+.nav-login-list{
+    list-style: none;
+}
+
+.nav-login-list li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-items-list{
+    list-style: none;
+}
+
+.nav-items-list li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.hero-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.hero-img{
+    position:relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    
+}
+
+.hero-img img{
+    width: 100%;
+    height: auto;
+    /* min-height: 80vh; */
+    min-width: 800px;
+    object-fit: cover;
+    background-blend-mode: color;
+    opacity: 90%;
+}
+
+.hero-content button {
+    color: #faeee2;
+    background-color: rgb(224, 118, 61);
+    padding: 10px 20px;
+    border: 3px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+.hero-title{
+    color: rgb(48, 37, 37);
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    position: absolute;
+    z-index: 999;
+    background-color: none;
+    top: 30%;
+    left: 10%;
+}
+
+.hero-title h2{
+    position: absolute;
+    left: 109%;
+    top: -25%;
+    color: rgb(251, 137, 188);
+    font-family: 'Lato', sans-serif; 
+    font-style: normal;
+    font-weight: 700;
+
+}
+
+.hero-des{
+    color: rgb(10, 10, 10);
+    font-family:'Yantramanav', sans-serif ;
+    opacity: 70%;
+    margin: 30px 10px;
+}
+
+
+.hero-para{
+    font-family:'Yantramanav', sans-serif ;
+    color: rgb(10, 10, 10);
+    opacity: 70%;
+    text-align: justify;
+    width: 350px;
+    height: auto;
+    font-size: large;
+}
+
+.hero-para h3{
+    color:rgb(247, 109, 37);
+}
+
+.hero-content{
+    padding-left: 30px;
+}
+
+
+
