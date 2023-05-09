@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Nunito:wght@200;300;400;500;600;700;800&family=Yantramanav:wght@300;400&display=swap');
+
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+/* {
+    pink: 251, 137, 188;
+    blue: 10, 104, 113;
+    black: 10, 10, 10;
+    white: 247, 255, 224;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;    
+}
+
+body{
+    background: rgb(10, 104, 113);
+}
+
+.app{
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 25px;
+    color: rgb(251, 137, 188) ;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: rgb(251, 137, 188);
+    font-weight: 600;
+}
+
+.btn{
+    background: #fff;
+    color:#222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+    background: rgb(251, 137, 188);
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background: #9aeabc;
+}
+
+.incorrect{
+    background: #ff9393;
+}
