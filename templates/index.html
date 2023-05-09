@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flash Cards</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
 </head>
 <body>
+    <nav>
+        <div class="nav-logo"><a href="/">LOGO</a></div>
+        <div class="nav-items">
+            <ul class="nav-items-list">
+                <li><a href="/features">Features</a></li>
+                <li><a href="/solutions">Solutions</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="nav-login">
+            <ul class="nav-login-list">
+                <li><a href="/login">LogIn</a></li>
+                <li><a href="/signup">Signin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-grid">
+        <div class="hero-img">
+            <img src="{{url_for('static', filename='hero.png')}}"  >
+
+        </div>
+        <div class="hero-content">
+            <div class="hero-title">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+            <div class="hero-des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae assumenda quibusdam aliquam minima asperiores,
+                 praesentium repellat aperiam ducimus iure recusandae ratione.</div>
+
+<a href="/youtube">            <button id="scroll-down" >Get Started</button></a>
+        </div>
+
+    </div>
+<!-- 
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="{{url_for('static', filename='scroll.js')}}"></script>
+    
     
 </body>
 </html>
