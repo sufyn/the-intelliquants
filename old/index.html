@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>YouTube Video Recommender</title>
+  </head>
+  <body>
+    <form id="search-form">
+      <label for="search-term">Search for a video:</label>
+      <input type="text" id="search-term" name="search-term">
+      <button type="submit">Search</button>
+    </form>
+<script>
+    // Define the search form and submit button
+const searchForm = document.getElementById('search-form');
+const submitButton = searchForm.querySelector('button[type="submit"]');
+
+// Add an event listener to the form to handle the search submission
+searchForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+  const searchTerm = document.getElementById('search-term').value;
+  searchYouTubeVideos(searchTerm);
+});
+
+// Define the function to search for YouTube videos
+function searchYouTubeVideos(searchTerm) {
+  const apiKey = 'AIzaSyCYXtmMyUxxYKVn15ukUAoNBitfcYTRbeU';
+  const apiUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchTerm}&type=video&key=${apiKey}`;
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const videos = data.items;
+      displayVideos(videos);
+    })
+    .catch(error => console.error(error));
+}
+
+// Define the function to display the search results
+function displayVideos(videos) {
+  const videoList = document.createElement('ul');
+  videos.forEach(video => {
+    const videoItem = document.createElement('li');
+    const videoLink = document.createElement('a');
+    videoLink.href = `https://www.youtube.com/watch?v=${video.id.videoId}`;
+    videoLink.target = '_blank';
+    videoLink.textContent = video.snippet.title;
+    videoItem.appendChild(videoLink);
+    videoList.appendChild(videoItem);
+  });
+  document.body.appendChild(videoList);
+}
+
+</script>
+
+</body>
+</html>
